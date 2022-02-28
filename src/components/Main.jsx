@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Main = () => {
-    const [breakLength, setBreakLength] = React.useState(5);
-    const [sessionLength, setSessionLength] = React.useState(25);
-    const [timeLeft, seTtimeLeft] = React.useState(1500);
-    const [timingType, setTimingtype] = React.useState("SESSION");
+    const [breakLength, setBreakLength] = useState(5);
+    const [sessionLength, setSessionLength] = useState(25);
+    const [timeLeft, seTtimeLeft] = useState(1500);
+    const [timingType, setTimingtype] = useState("SESSION");
 
-    const [play, setPlay] = React.useState(false);
+    const [play, setPlay] = useState(false);
 
     const timeout = setTimeout(() => {
         if (timeLeft && play) {
